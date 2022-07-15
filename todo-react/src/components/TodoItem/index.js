@@ -5,10 +5,7 @@ import './TodoItem.css';
 
 
 function TodoItem(props) {
-  // const onComplete = () => {
-  //   alert('ya completaste el todo ✅ ' + props.text);
-  // }
-
+ 
 
   return (
     <li className="TodoItem">

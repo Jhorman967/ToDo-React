@@ -25,16 +25,19 @@ function TodoProvider(props){
             completed: false,
             text,
         })
-  
-        
         saveTodos(newTodos);
       };
 
          const completTodo = (text) => {
           const todoIndex = todos.findIndex(todo=>todo.text === text);
           const newTodos = [...todos];
-    
-          newTodos[todoIndex].completed = true;
+
+          if (!newTodos[todoIndex].completed)
+            {newTodos[todoIndex].completed = true;}
+            else{
+                newTodos[todoIndex].completed = false;
+            }
+
           saveTodos(newTodos);
         };
     
